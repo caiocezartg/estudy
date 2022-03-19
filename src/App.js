@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import GlobalStyle from "./global/styles";
+import "react-toastify/dist/ReactToastify.css";
+import Account from "./pages/Account";
+import PageNotFound from "./components/PageNotFound";
+import LoginRegister from "./components/LoginRegister";
+import LoginScreen from "./components/LoginScreen";
+import { UserStorage } from "./contexts/UserContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <UserStorage>
+        <GlobalStyle />
+        <ToastContainer />
+        <Routes>
+          <Route path="/" element={<LoginScreen />} />
+          <Route path="/cadastro" element={<LoginRegister />} />
+          <Route path="/conta/*" element={<Account />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </UserStorage>
+    </BrowserRouter>
   );
 }
 

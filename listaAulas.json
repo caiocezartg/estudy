@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "materia": "programacao",
+        "assunto": "Conceitos básicos de ReactJS",
+        "duracao": 40,
+        "plataforma": "Youtube"
+    },
+    {
+        "id": 2,
+        "materia": "programacao",
+        "assunto": "Como funciona array em JavaScript",
+        "duracao": 320,
+        "plataforma": "Origamid"
+    },
+    {
+        "id": 3,
+        "materia": "historia",
+        "assunto": "Conheça a história sobre Ditadura Militar",
+        "duracao": 93,
+        "plataforma": "Youtube"
+    },
+    {
+        "id": 4,
+        "materia": "portugues",
+        "assunto": "Literatura Clássica",
+        "duracao": 320,
+        "plataforma": "Edubrasil"
+    },
+    {
+        "id": 5,
+        "materia": "portugues",
+        "assunto": "Entenda os reagentes químicos!",
+        "duracao": 35,
+        "plataforma": "Artigo Wikipedia"
+    }
+]
